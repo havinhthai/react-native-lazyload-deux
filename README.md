@@ -79,13 +79,13 @@ class LazyloadScrollViewExample extends Component {
 }
 ```
 
-### LazyloadListView
+### LazyloadFlatList
 
-A lazyload container component based on `ListView`. Won't render `LazyloadView` and `LazyloadImage` until they are visible on screen.
+A lazyload container component based on `FlatList`. Won't render `LazyloadView` and `LazyloadImage` until they are visible on screen.
 
 #### Props
 
-* [ListView](https://facebook.github.io/react-native/docs/listview.html#props).
+* [FlatList](https://facebook.github.io/react-native/docs/flatlist#props).
 
 #### Functions
 
@@ -108,7 +108,7 @@ const views = [
   }
 ];
 
-class LazyloadListViewExample extends Component {
+class LazyloadFlatListExample extends Component {
   renderViews() {
     return views.map((view, i) => {
       return (
@@ -128,11 +128,11 @@ class LazyloadListViewExample extends Component {
 
   render() {
     return (
-      <LazyloadListView
+      <LazyloadFlatList
         name="unique-lazyload-list-name"
       >
         {this.renderView()}
-      </LazyloadListView>
+      </LazyloadFlatList>
     );
   }
 }
@@ -140,7 +140,7 @@ class LazyloadListViewExample extends Component {
 
 ### LazyloadView
 
-Based on View component. This component's content won't be rendered util it scrolls into sight. It should be inside a `LazyloadScrollView` or `LazyloadListView` which has the same `name` prop as this component's host prop.
+Based on View component. This component's content won't be rendered util it scrolls into sight. It should be inside a `LazyloadScrollView` or `LazyloadFlatList` which has the same `name` prop as this component's host prop.
 
 #### Props
 
@@ -155,7 +155,7 @@ See either example above.
 
 ### LazyloadImage
 
-Based on Image component. The image content won't be rendered util it scrolls into sight. It should be inside a `LazyloadScrollView` or `LazyloadListView` which has the same `name` prop as this component's host prop.
+Based on Image component. The image content won't be rendered util it scrolls into sight. It should be inside a `LazyloadScrollView` or `LazyloadFlatList` which has the same `name` prop as this component's host prop.
 
 #### Props
 
